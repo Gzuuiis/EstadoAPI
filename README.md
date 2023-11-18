@@ -18,7 +18,9 @@ Pacotes principais: **Express** responsável pela criação de rotas.
 
 - Instalar dependência: `yarn install` ou `npm install` 
 
-- Iniciar aplicação em produção: `yarn start` 
+- Iniciar aplicação em produção: `yarn start`
+  
+- Após Inicialização e Configuração, devemos ir em `localhost:3000`
 
  
 
