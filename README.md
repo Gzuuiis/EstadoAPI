@@ -4,7 +4,7 @@
 
   
 
-Projeto **InfoEstado**:  utilizando Stack **NodeJS** 
+Projeto **EstadoAPI**:  utilizando Stack **NodeJS** 
 
   
 
