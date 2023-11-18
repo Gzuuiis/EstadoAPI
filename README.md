@@ -8,7 +8,7 @@ Projeto **InfoEstado**:  utilizando Stack **NodeJS**
 
   
 
-Pacotes principais: **Express** responsável pela criação de rotas. **** 
+Pacotes principais: **Express** responsável pela criação de rotas. 
 
  
 
