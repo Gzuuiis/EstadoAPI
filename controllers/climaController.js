@@ -1,7 +1,7 @@
 const express = require('express');
 
 const pegarInfoTempo = require('../services/climaService.js');
-const formatarEstado = require('../utils/utilidades.js');
+const formatarEstado = require('../utils/formatEstado.js');
 
 const router = express.Router();
 
@@ -16,13 +16,16 @@ router.get('/', async (req, res) => {
         const estadoFormatado = formatarEstado(estado);
         const info = await pegarInfoTempo.pegarInfoTempo(estadoFormatado);
 
+        //Convertendo temperatura de Kelvin para Celsius
+        const tempQtC = parseInt(info.main.temp - 273);
+
         const response = {
             clima: {
                 nomeEstado: info.name,
                 nomePais: info.sys.country,
-                icone: info.weather.icon,
+                icone: info.weather[0].icon,
                 temperatura: {
-                    tempQT: info.main.temp,
+                    tempQT: tempQtC,
                     tempDesc: info.weather[0].description,
                 },
                 tempoDetalhes: {
@@ -39,7 +42,15 @@ router.get('/', async (req, res) => {
             }
         };
 
-        res.status(200).json(response);
+
+
+        const formattedJson = JSON.stringify(response)
+
+
+
+        res.status(200).send(formattedJson);
+
+
     } catch (error) {
         console.error('Erro ao obter informações climáticas:', error);
         res.status(500).json({ error: 'Erro do servidor' });

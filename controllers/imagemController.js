@@ -1,7 +1,7 @@
 const express = require('express');
 
 const pegarFotoEstado = require('../services/imagemService.js');
-const formatarEstado = require('../utils/utilidades.js');
+const formatarEstado = require('../utils/formatEstado.js');
 
 const router = express.Router();
 
@@ -24,7 +24,9 @@ router.get('/', async (req, res) => {
             perfilUsuario: foto.user.links.html
         }));
 
-        res.status(200).json(response);
+        const formattedJson = JSON.stringify(response, null, 2);
+
+        res.status(200).send(formattedJson);
         
     } catch (error) {
         console.error('Erro ao obter foto do Estado:', error);
