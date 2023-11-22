@@ -11,12 +11,10 @@ Projeto **EstadoAPI**:  utilizando Stack **NodeJS**
 Pacotes principais: **Express** responsável pela criação de rotas. 
 
 
-Apis Utilizadas: OpenWeather, NewsApi, Unsplash, Wikipedia
+APIs Utilizadas: OpenWeather, NewsApi, Unsplash, Wikipedia
  
 
 ## Instalação: 
-
-  
 
 - Instalar dependência: `yarn install` ou `npm install` 
 
