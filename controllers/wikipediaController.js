@@ -15,7 +15,6 @@ router.get('/', async (req, res) => {
 
         const info = await pegarWikipediaInfo.buscarInformacoesWikipedia(estado);
 
-        console.log(info);
 
         const response = {
             informações:{
