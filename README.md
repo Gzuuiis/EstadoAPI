@@ -8,7 +8,8 @@ Projeto **EstadoAPI**:  utilizando Stack **NodeJS**
 
   
 
-Pacotes principais: **Express** responsável pela criação de rotas. 
+Pacotes principais: **Express** responsável pela criação de rotas.
+**Cheerio** para raspagem de dados da página do Wikipedia. 
 
 
 APIs Utilizadas: OpenWeather, NewsApi, Unsplash, Wikipedia
